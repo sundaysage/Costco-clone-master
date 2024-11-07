@@ -1,0 +1,151 @@
+/* Tab content - closed */
+.tab-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* Label formatting when open */
+.tab input:checked + label {
+  border-left-width: 1px;
+  border-color: white;
+}
+
+/* Icon */
+.tab .label .icon {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  transform-origin: center center;
+}
+
+/* Open Multiple Icon Formatting - Open */
+.tab input[type="checkbox"]:checked + .label .icon {
+  transform: rotate(135deg);
+}
+
+/* List Transition */
+ul a {
+  transition: color 0.5s ease;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1em;
+  border: none;
+  outline: none;
+  color: blue;
+  padding: 1em;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 70%;
+  z-index: 1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  padding: 10px 0;
+}
+.dropdown-listtwo {
+  /* display: none; */
+}
+
+.dropdown-content:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 35%;
+  margin-left: -283px;
+  margin-top: -15px;
+  width: 0;
+  z-index: 1;
+  height: 0;
+  border-bottom: solid 15px #fff;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #333;
+  padding: 2px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  opacity: 0.6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.img-box:hover .img-view {
+  display: block;
+}
+.dd-one:hover ~ .dropdown-listtwo {
+  display: block;
+}
+
+.text-small1{
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .top-tel{
+    display: flex !important;
+    margin-left: auto;
+    justify-content: end;
+  }
+
+  .box-item{
+    display: none ;
+  }
+
+  .top-tel:hover ~ .box-item {
+    display: block !important;
+  }
+
+  .pi-items{
+    display: flex;
+  }
+
+  .count-box {
+    height: 33px;
+  }
+
+  .btn-count{
+    padding: 10px;
+    line-height: 0;
+  }
+  .pi-img{
+    width: 300px;
+    padding-right: 10px;
+  }
+}
+
+
